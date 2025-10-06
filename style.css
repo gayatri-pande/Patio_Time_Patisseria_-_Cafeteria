@@ -16,6 +16,11 @@ html, body {
   overflow-x: hidden; 
 }
 
+body, html, #main, #wrapper, #container {
+  overflow: visible !important;
+}
+
+
 /* HEADER */
 #header {
   display: flex;
@@ -24,12 +29,13 @@ html, body {
   padding: 15px 50px;
   background: #fff;
   border-bottom: 1px solid #eee;
-   position: sticky;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
 }
+
 
 
 .navbar ul {
@@ -44,9 +50,9 @@ html, body {
 
 .navbar ul li a {
   text-decoration: none;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
-  color: #222;
+  color: #474747;
   letter-spacing: 1px;
   transition: all 0.3s ease;
 }
@@ -89,11 +95,11 @@ html, body {
 }
 
 
-#header {
+/* #header {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
 
 
@@ -591,7 +597,8 @@ footer {
   margin: 0 auto;
   position: relative;
   color: #fff; 
-  background: url("img/pexels-brigitte-tohm-36757-239581.jpg") center/cover no-repeat;
+  background: url("img/imgi_2_lore-schodts-FIxdY7jOBus-unsplash.jpg") center/cover no-repeat;
+  border: none  !important;
 }
 
 #about-us::before {
@@ -719,15 +726,12 @@ footer {
 #about-us-img > div:nth-child(3) img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-
 }
 
 #about-us-img img {
   display: block;
   width: 100%;
   height: auto;
-  /* object-fit: cover; */
 }
 
 #Philosophy {
@@ -741,21 +745,19 @@ footer {
 
 #Philosophy > div:first-child {
   display: flex;
-  /* gap: 20px; */
 }
 
 #Philosophy > div:first-child img {
   width: 260px;
   height: auto;
-  /* object-fit: cover; */
-  /* border-radius: 6px; */
+  position: relative;
+  z-index: 6;
 }
-
 #Philosophy h3 {
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 600;
-  color: #e67e22;
+  color: rgb(239, 154, 43);
   letter-spacing: 1px;
   margin-bottom: 12px;
 }
@@ -764,7 +766,7 @@ footer {
   font-size: 42px;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #111;
+  color: black;
   line-height: 1.3;
 }
 
@@ -781,16 +783,14 @@ footer {
   color: #fff;
   border: none;
   padding: 14px 32px;
-  /* border-radius: 3px; */
   font-size: 14px;
   letter-spacing: 1px;
   font-weight: 600;
-  /* cursor: pointer; */
   transition: background 0.3s ease;
 }
 
 #Philosophy button:hover {
-  background: #cf711f;
+  background: rgb(237, 157, 29);
 }
 
 /* VISIT SECTION */
@@ -799,29 +799,31 @@ footer {
   align-items: center;
   justify-content: space-between;
   padding: 80px 100px;
-  background: #fff; 
+  background: white; 
 }
 
 /* Left Side (Text) */
 #visit > div:first-child {
   flex: 1;
-  max-width: 550px;
-   text-align: right;
+  max-width: 600px;
+  text-align: right;
+  
 }
 
 #visit h3 {
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 600;
-  color: #e67e22; 
+  color:  rgb(237, 157, 29); 
   letter-spacing: 1px;
   margin-bottom: 15px;
 }
 
 #visit h2 {
-  font-size: 48px;
-  font-weight: 700;
-  color: #111;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 36px;
+  font-weight: 550;
+  color: black;
   margin-bottom: 20px;
   line-height: 1.3;
 }
@@ -834,8 +836,8 @@ footer {
 }
 
 #visit button {
-  background: #e67e22;
-  color: #fff;
+  background:  rgb(237, 157, 29);
+  color: white;
   border: none;
   padding: 14px 32px;
   border-radius: 3px;
@@ -846,7 +848,7 @@ footer {
 }
 
 #visit button:hover {
-  background: #cf711f;
+  background:  rgb(237, 157, 29);
 }
 #visit  div:last-child {
   flex: 1;
@@ -857,8 +859,8 @@ footer {
 
 #visit  div:last-child img {
   width: 100%;
-  max-width: 260px;
-  height: 380px;
+  max-width: 320px;
+  height: 480px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 /* Saying Section - Full Width Side by Side */
@@ -879,8 +881,8 @@ footer {
 
 .saying-img img {
   width: 100%;
-  height: 100vh; /* full viewport height */
-  object-fit: cover; /* cover nicely */
+  height: 100vh; 
+  object-fit: cover; 
   display: block;
 }
 
@@ -916,19 +918,14 @@ footer {
 }
 
 /* pastries page  */
-/* ------------------------------
-   MAIN IMAGE SECTION
------------------------------- */
+
 #main-img img {
   width: 100%;
   height: 50vh; 
   object-fit: cover;
   display: block;
 }
-
-/* ------------------------------
-   COLLECTION SECTION
------------------------------- */
+/* collection section  */
 #collection {
   text-align: center;
   padding: 60px 20px;
@@ -937,15 +934,14 @@ footer {
 #collection h3 {
   color: orange;
   text-transform: uppercase;
-  /* font-family: "Playfair Display", serif; */
-  font-size: 18px; /* smaller font */
+  font-size: 18px; 
 }
 
 #collection h2 {
   color: black;
   font-family: "Times New Roman", Times, serif;
   text-transform: uppercase;
-  font-size: 50px; /* larger font */
+  font-size: 50px; 
   font-weight: 600;
   margin-top: 10px;
 }
@@ -974,18 +970,16 @@ footer {
   color: orange;
   border: 1px solid orange;
 }
-
-/* ------------------------------
-   SHOPPING SECTIONS
------------------------------- */
+/* shopping section  */
 #shopping,
 .shopping-2 {
   display: flex;
   justify-content: space-between;
   align-content: center;
-  align-items: stretch; /* same height */
+  align-items: stretch; 
   padding: 0;
   margin: 0;
+  height: 500px;
 }
 
 .shopping-content,
@@ -996,6 +990,7 @@ footer {
   padding: 40px;
   border: 2px dashed brown;
   box-sizing: border-box;
+  line-height: 30px;
 }
 
 .shopping-img,
@@ -1008,14 +1003,14 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 0; /* no rounded corners */
+  border-radius: 0; 
 }
 
 .shopping-content h3,
 .shopping-2-content h3 {
   position: relative;
   display: inline-block;
-  margin-bottom: 20px;
+  margin-bottom: 45px;
 }
 
 .shopping-content h3::after,
@@ -1026,7 +1021,7 @@ footer {
   width: 80px;
   height: 3px;
   border-bottom: 3px solid orange;
-  margin-top: 5px;
+  margin-top: 5lpx;
 }
 
 .shopping-content button,
@@ -1047,15 +1042,12 @@ footer {
   background-color: brown;
   color: white;
 }
-
-/* ------------------------------
-   PASTRIES IMAGE SECTION
------------------------------- */
+/* pastries img section  */
 .pastries-img {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px; /* increased gap */
+  gap: 40px; 
   flex-wrap: wrap;
   padding: 50px 20px;
 }
@@ -1080,62 +1072,206 @@ footer {
   margin-top: 12px;
   color: black;
   font-weight: 600;
-  font-size: 18px; /* slightly larger */
+  font-size: 18px;
 }
 
 .pastries-img h6 {
   color: #444;
   font-weight: 500;
-  font-size: 16px; /* slightly larger */
+  font-size: 16px; 
+}
+
+#contact-hero {
+  background: url('https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb') center/cover no-repeat;
+  height: 70vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-overlay {
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 60px 20px;
+  width: 100%;
+}
+.hero-overlay p {
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+.hero-overlay h1 {
+  font-size: 60px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* LOCATION SECTION */
+#location {
+  display: flex;
+  justify-content: center;
+  padding: 80px 10%;
+  background: #fff;
+}
+#location .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+}
+.location-left {
+  flex: 1 1 55%;
+}
+.location-left h4 {
+  color: #e67e22;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+.location-left h2 {
+  font-size: 40px;
+  margin: 10px 0 20px;
+}
+.location-left p {
+  margin-bottom: 20px;
+}
+.stores {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.store h3 {
+  margin-bottom: 10px;
+}
+.btn {
+  background: #e67e22;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #cf711f;
+}
+.location-right {
+  flex: 1 1 40%;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 550px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.location-right iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* MENU PAGE  */
+
+#menu-hero {
+  background: url("img/imgi_2_vojtech-bartonicek-sVbMkK8-HAs-unsplash.jpg") center/cover no-repeat;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.menu-hero-content {
+  text-align: center;
+  color: white;
+  padding: 50px;
+}
+
+.menu-hero-content h5 {
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.menu-hero-content h1 {
+  font-size: 50px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+/* MENU SECTION */
+.menu-section {
+  width: 100%;
+  max-width: 1350px;
+  margin: 60px auto ;
 }
 
 .menu-container {
   display: flex;
   justify-content: space-between;
-  max-width: 1000px;
-  margin: 0 auto;
-  gap: 50px;
+  gap: 40px;
+  margin-bottom: 40px;
 }
 
-.menu-section {
-  width: 48%;
-}
-
-h2 {
-  text-align: center;
-  font-size: 28px;
-  letter-spacing: 2px;
-  border-top: 2px solid #c75b00;
-  border-bottom: 2px solid #c75b00;
-  padding: 10px 0;
-  margin-bottom: 30px;
-}
-
-.menu-item {
-  margin-bottom: 25px;
-}
-
-.item-name {
-  font-size: 20px;
-  font-weight: 500;
-}
-
-.dots {
+.menu-column {
   flex: 1;
-  border-bottom: 1px dotted #555;
-  margin: 0 10px;
-  height: 1em;
-  display: inline-block;
-  vertical-align: middle;
 }
 
-.price {
-  font-size: 18px;
+.menu-column h2 {
+  text-align: center;
+  font-size: 23px;
+  margin-bottom: 15px;
+  border-top: 2px solid rgb(255, 98, 0);
+  border-bottom: 2px solid  rgb(255, 98, 0) ;
+  padding: 8px 0;
+  letter-spacing: 1px;
+}
+
+.menu-column ul {
+  list-style: none;
+}
+
+.menu-column li {
+  display: flex;
+  justify-content: space-between;
   font-weight: 500;
+  margin: 10px 0 4px;
+  padding-bottom: 3px;
 }
 
-.desc {
-  font-size: 15px;
-  color: #777;
-  margin-top: 5px;
+.menu-column p {
+  font-size: 12px;
+  color: rgb(63, 63, 63);
+  margin-left: 3px;
+  margin-bottom: 8px;
+}
+
+.menu-column span {
+  font-size: 23px;
+  line-height: 15 px;
+}
+/* MENU IMAGES SECTION */
+.menu-image {
+  margin: 60px 0;
+}
+
+.menu-images {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: auto;
+}
+
+.menu-images img {
+  width: 33%;
+  height: 450px;
+}
+
+.menu-end-img{
+ width: 100%;
+ overflow: hidden;
+ height: 500px;
+}
+
+.menu-section{
+ justify-content: center;
 }
